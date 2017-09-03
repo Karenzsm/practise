@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天数计算</title>
+</head>
+<body>
+	<script>
+		function myYear(){
+			var y=prompt("请输入您的出生年份");
+			return y;
+		}
+		function myMonth(){
+			var m=prompt("请输入您的出生月份");
+			return m;
+		}
+		function myDay(){
+			var d=prompt("请输入您的出生日期");
+			return d;
+		}
+		function number(){
+			var s=0;
+			if ((year%4==0&&year%100!=0)||year%400==0) {
+				for(var i=1;i<month;i++){
+					switch(i){
+						case 1:s+=31;break;
+						case 2:s+=29;break;
+						case 3:s+=31;break;
+						case 4:s+=30;break;
+						case 5:s+=31;break;
+						case 6:s+=30;break;
+						case 7:s+=31;break;
+						case 8:s+=31;break;
+						case 9:s+=30;break;
+						case 10:s+=31;break;
+						case 11:s+=30;break;
+						case 12:s+=31;break;
+						default:break;
+					}
+				}
+				return s;
+			}else {
+				for(var i=1;i<month;i++){
+					switch(i){
+						case 1:s+=31;break;
+						case 2:s+=28;break;
+						case 3:s+=31;break;
+						case 4:s+=30;break;
+						case 5:s+=31;break;
+						case 6:s+=30;break;
+						case 7:s+=31;break;
+						case 8:s+=31;break;
+						case 9:s+=30;break;
+						case 10:s+=31;break;
+						case 11:s+=30;break;
+						case 12:s+=31;break;
+						default:break;
+					}
+				}
+				return s;
+			}
+		}
+		var year=parseInt(myYear()),month=parseInt(myMonth()),day=parseInt(myDay());
+		var sum=day+number();
+		document.write("您的生日在"+year+"年是第"+sum+"天");
+	</script>
+</body>
+</html>
